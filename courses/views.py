@@ -6,7 +6,7 @@ from cloudipsp import Api, Checkout
 import time
 import json
 
-secret_key = "ZuTPVQv2oWnjsheUIeoRhZ1AQIIth8hd"
+secret_key = "QrcWmNmhjZsWvW9nvLJvBTf6yLW23Ccl"
 
 
 class HomePage(ListView):
@@ -30,15 +30,15 @@ def callback_payment(request):
 
 
 def tarrifsPage(request):
-    api = Api(merchant_id=1433491,
+    api = Api(merchant_id=1465283,
               secret_key=secret_key)
     checkout = Checkout(api=api)
     data = {
         "currency": "RUB",
-        "amount": 150000,
+        "amount": 1000,
         "order_desc": "Покупка подписки на сайте",
         "order_id": str(time.time()),
-        'merchant_data': 'example@itproger.com'
+        'merchant_data': 'itpomoshn1k@yandex.ru'
     }
     url = checkout.url(data).get('checkout_url')
 
