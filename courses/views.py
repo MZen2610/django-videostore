@@ -35,7 +35,7 @@ def tarrifsPage(request):
     checkout = Checkout(api=api)
     data = {
         "currency": "RUB",
-        "amount": 1000,
+        "amount": 100000,
         "order_desc": "Покупка подписки на сайте",
         "order_id": str(time.time()),
         'merchant_data': 'itpomoshn1k@yandex.ru'
